@@ -16,6 +16,8 @@ namespace CSKripto2_2
 
         static void Main(string[] args)
         {
+            Console.WriteLine("Diszkrét logaritmusos implementáció");
+            Console.WriteLine();
             Console.WriteLine("Generation value: " + gGeneratorValue);
             Console.WriteLine("Prime number: " + nPrimeNumber);
             Console.WriteLine("Password: " + pass);
@@ -37,7 +39,7 @@ namespace CSKripto2_2
             Console.WriteLine("r: " + r);
 
             BigInteger Result;
-            Console.WriteLine("ModInverse: " + modInverse((BigInteger.Pow(3, -(int)r) % nPrimeNumber), nPrimeNumber));
+            Console.WriteLine("ModInverse: " + modInverse((BigInteger.Pow(3, -(int)r) % nPrimeNumber), nPrimeNumber)); //DEBUG
 
             if (r < 0)
                 Result = (modInverse((BigInteger.Pow(gGeneratorValue, -(int)r) % nPrimeNumber), nPrimeNumber) * (BigInteger.Pow(y, (int)c) % nPrimeNumber)) % nPrimeNumber;
